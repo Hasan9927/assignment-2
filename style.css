@@ -34,10 +34,14 @@
   color: var(--primary-color);
   font-size: var(--font-normal);
 }
+/* main style */
 main {
   max-width: 1170px;
   margin: 0 auto;
 }
+/* header banner continaer */
+
+/* header style */
 nav {
   display: flex;
   align-items: center;
@@ -52,7 +56,6 @@ nav p span {
   font-weight: var(--extra-bold);
   color: var(--orange-color);
 }
-
 header {
   display: flex;
   justify-content: space-between;
@@ -77,5 +80,77 @@ header ul li a {
 }
 header ul li:first-child a {
   color: var(--orange-color);
-  font-weight: var(--bold);
+  font-weight: var(--extra-bold);
+}
+
+/* banner style */
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  border-radius: 16px;
+  background-image: url(./Images/banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: gray;
+  background-blend-mode: multiply;
+  margin-bottom: 100px;
+}
+#banner h1 {
+  font-size: var(--font-5xl);
+  font-weight: var(--extra-bold);
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
+}
+#banner p {
+  color: white;
+  text-align: center;
+  width: 55%;
+  margin: 0 auto;
+  line-height: 26px;
+  margin-bottom: 48px;
+}
+#banner-input-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.banner-input {
+  background-color: white;
+  outline: none;
+  border-radius: 8px;
+  padding: 16px;
+}
+.banner-input i {
+  color: black;
+  background-color: white;
+}
+.banner-input input {
+  outline: none;
+  border: none;
+}
+.banner-button {
+  background-color: var(--orange-color);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 16px 32px;
+}
+.banner-button button,
+.banner-button i {
+  background-color: var(--orange-color);
+  color: white;
+  font-weight: var(--extra-bold);
+  font-size: var(--font-md);
+}
+.banner-button button {
+  border: none;
+  outline: none;
 }
