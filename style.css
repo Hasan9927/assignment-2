@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap");
-
+/* i use margin bottom only [for responsive purpose] */
 :root {
   /* color */
   --primary-color: rgb(19, 19, 24);
@@ -34,6 +34,11 @@
   color: var(--primary-color);
   font-size: var(--font-normal);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* main style */
 main {
   max-width: 1170px;
@@ -61,6 +66,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 999;
 }
 .hamburger {
   display: none;
@@ -153,4 +163,179 @@ header ul li:first-child a {
 .banner-button button {
   border: none;
   outline: none;
+}
+
+/* Popular tour section */
+#popular-tour-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 53px;
+  margin-bottom: 100px;
+}
+
+#left-popular-section {
+  height: min-content;
+  display: grid;
+  gap: 24px;
+}
+#left-popular-section h1 {
+  font-size: var(--font-2xl);
+  font-weight: var(--extra-bold);
+}
+#left-popular-section p {
+  color: var(--secondary-color);
+}
+
+#left-popular-section h3 {
+  color: var(--rare-color);
+}
+
+#popular-tour-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 16px;
+}
+#popular-tour-section ul li {
+  color: var(--secondary-color);
+}
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 8px;
+  background-color: var(--orange-color);
+  font-size: var(--font-lg);
+  font-weight: var(--extra-bold);
+  border: none;
+  color: white;
+  width: 174px;
+  border: 1px solid var(--orange-color);
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.3s;
+}
+.btn:hover {
+  background: white;
+  color: var(--orange-color);
+  border: 1px solid var(--orange-color);
+}
+
+#destination-section {
+  margin-bottom: 100px;
+}
+#destination-section h1 {
+  font-size: var(--font-2xl);
+  font-weight: var(--extra-bold);
+  text-align: center;
+  margin-bottom: 24px;
+}
+#destination-section p {
+  color: var(--secondary-color);
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+.mobile-grid {
+  display: none;
+}
+
+.pc-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.pc-grid-top {
+  display: flex;
+  gap: 24px;
+}
+.pc-grid-middle {
+  display: flex;
+  gap: 24px;
+  flex-basis: 1;
+}
+.pc-grid-bottom {
+  display: flex;
+  gap: 24px;
+}
+.grid-relative {
+  position: relative;
+}
+.grid-relative h1 {
+  position: absolute;
+  color: #fff; /* Set the text color to be visible on the background */
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -10%);
+  font-size: var(--font-lg);
+  font-weight: var(--extra-bold);
+}
+
+/* choose use section */
+#choose-us-section {
+  margin-bottom: 100px;
+}
+#choose-us-section h1 {
+  margin-bottom: 24px;
+  font-size: var(--font-2xl);
+  font-weight: var(--extra-bold);
+  text-align: center;
+}
+
+.choose-us-p {
+  text-align: center;
+  color: var(--secondary-color);
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+
+.choose-us-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.choose-us-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 570px;
+  justify-content: center;
+  align-items: start;
+}
+.choose-us-card i {
+  font-size: 64px;
+}
+.choose-us-card h1 {
+  font-size: var(--font-xl);
+  font-weight: var(--extra-bold);
+}
+.choose-us-card p {
+  color: var(--rare-color);
+  text-align: left;
+}
+.card-1 {
+  border-radius: 16px;
+  background-color: rgba(251, 181, 99, 0.05);
+  border: 1px solid rgba(251, 181, 99, 0.2);
+  flex-grow: 1;
+}
+.card-2 {
+  border: 1px solid rgba(41, 206, 246, 0.2);
+  border-radius: 16px;
+  background: rgba(41, 206, 246, 0.05);
+  flex-grow: 1;
+}
+.card-3 {
+  border: 1px solid rgba(233, 68, 68, 0.2);
+  border-radius: 16px;
+  background: rgba(233, 68, 68, 0.05);
+  margin: 0 auto;
 }
